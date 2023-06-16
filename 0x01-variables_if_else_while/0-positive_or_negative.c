@@ -5,9 +5,9 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - entry point to our prg
+ *main - entry point to our prg
  *
- * Return : 0 if success
+ *Return: 0 if success
  */
 
 int main(void)
@@ -20,11 +20,11 @@ if (n > 0)
 {
 printf("%d is positive\n", n);
 }
-else if (n == 0)
+if (n == 0)
 {
 printf("%d is zero\n", n);
 }
-else
+if (n < 0)
 {
 printf("%d is nagative\n", n);
 }
