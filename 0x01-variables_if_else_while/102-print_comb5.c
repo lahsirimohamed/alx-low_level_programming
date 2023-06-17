@@ -25,11 +25,11 @@ putchar(m + '0');
 putchar(' ');
 putchar(l + '0');
 putchar(p + '0');
-}
 if (n != 9 || m != 8 || l != 9 || p != 9)
 {
 putchar(',');
 putchar(' ');
+}
 }
 }
 }
