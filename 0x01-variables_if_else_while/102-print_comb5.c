@@ -14,19 +14,18 @@ for (n = 0; n < 10; n++)
 {
 for (m = 0; m < 10; m++)
 {
-for (l = n; l < 10; l++)
+for (l = 0; l < 10; l++)
 {
-for (p = m; p < 10; p++)
+for (p = 0; p < 10; p++)
 {
-if (n == l && m == p)
+while (n * 10 + m < l * 10 + p)
 {
-p += 1;
-}
 putchar(n + '0');
 putchar(m + '0');
 putchar(' ');
 putchar(l + '0');
 putchar(p + '0');
+}
 if (n != 9 || m != 8 || l != 9 || p != 9)
 {
 putchar(',');
