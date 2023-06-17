@@ -18,7 +18,7 @@ for (l = 0; l < 10; l++)
 {
 for (p = 0; p < 10; p++)
 {
-while (n * 10 + m < l * 10 + p)
+if (n * 10 + m < l * 10 + p)
 {
 putchar(n + '0');
 putchar(m + '0');
