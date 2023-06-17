@@ -20,7 +20,7 @@ for (p = m; p < 10; p++)
 {
 if (n == l && m == p)
 {
-m += 1;
+p += 1;
 }
 putchar(n + '0');
 putchar(m + '0');
