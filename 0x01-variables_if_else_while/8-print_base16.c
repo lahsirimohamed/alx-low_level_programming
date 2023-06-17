@@ -15,7 +15,7 @@ putchar(p + '0');
 }
 else
 {
-putchar(p + 'a');
+putchar(p -10 + 'a');
 }
 p += 1;
 }
