@@ -16,8 +16,12 @@ for (m = 0; m < 10; m++)
 {
 for (l = n; l < 10; l++)
 {
-for (p = m + 1; p < 10; p++)
+for (p = m; p < 10; p++)
 {
+if (n == l && m == p)
+{
+m += 1;
+}
 putchar(n + '0');
 putchar(m + '0');
 putchar(' ');
