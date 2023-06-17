@@ -19,5 +19,6 @@ putchar(p - 10 + 'a');
 }
 p += 1;
 }
+putchar('\n');
 return (0);
 }
