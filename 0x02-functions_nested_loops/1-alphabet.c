@@ -1,24 +1,14 @@
 #include <stdio.h>
-/**
- *main - entry point to our prg
- *
- *Return: 0 if succces
- */
-int main(void)
-{
-void print_alphabet(void);
-return (0);
-}
-
+#include "main.h"
 /**
  * print_alphabet - print the lowercase aalphabet letters
  */
 void print_alphabet(void)
 {
-int i;
-for (i = 97; i < 123; i++)
+char i;
+for (i = 'a'; i <= 'z'; i++)
 {
-putchar('i');
+_putchar(i);
 }
-putchar('\n');
+_putchar('\n');
 }
