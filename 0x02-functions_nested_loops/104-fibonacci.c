@@ -8,33 +8,37 @@
 
 int main(void)
 {
-	unsigned long int a = 1, b = 1, c, d;
+	unsigned long int i;
+	unsigned long int a = 1;
+	unsigned long int b = 2;
+	unsigned long int l = 1000000000;
+	unsigned long int c;
+	unsigned long int d;
+	unsigned long int e;
+	unsigned long int j;
 
-	for (d = 0; d < 90; d++)
+	printf("%lu", a);
+
+	for (i = 1; i < 91; i++)
 	{
-		printf("%lu", b);
-
-		if (d != 97)
-			printf(", ");
-
-		c = a + b;
-		a = b;
-		b = c;
+		printf(", %lu", b);
+		b += a;
+		a = b - a;
 	}
 
-	unsigned long int e = a % 1000000000;
-	unsigned long int f = b % 1000000000;
-	unsigned long int sum = (a + b) / 1000000000;
+	c = (a / l);
+	d = (a % l);
+	e = (b / l);
+	j = (b % l);
 
-	for (d = 90; d < 98; d++)
+	for (i = 92; i < 99; ++i)
 	{
-		printf(", %lu", e + f);
-
-		unsigned long int y = e;
-
-		y = f;
-		f = (y + f + sum) % 100000000;
-		carry = (y + f + sum) / 1000000000;
+		printf(", %lu", e + (j / l));
+		printf("%lu", j % l);
+		e = e + c;
+		c = e - c;
+		j = j + d;
+		d = j - d;
 	}
 	printf("\n");
 	return (0);
