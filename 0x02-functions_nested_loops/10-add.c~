@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include "main.h"
+/**
+ *add - dds two integers and returns the result.
+ *@n: the number to add
+ *@m: the number to add
+ *Return: the sum
+ */
+int add(int n, int m)
+{
+return (n + m);
+}  
