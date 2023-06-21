@@ -14,7 +14,7 @@ int main(void)
 	{
 		printf("%lu", b);
 
-		if (d != 97)  /* Check if it's the last number to avoid trailing comma */
+		if (d != 97)  
 			printf(", ");
 
 		c = a + b;
