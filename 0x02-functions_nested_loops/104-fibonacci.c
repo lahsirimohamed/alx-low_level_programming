@@ -22,15 +22,15 @@ int main(void)
 		b = c;
 	}
 
-	unsigned long e = a % 1000000000;
-	unsigned long f = b % 1000000000;
-	unsigned long sum = (a + b) / 1000000000;
+	unsigned long int e = a % 1000000000;
+	unsigned long int f = b % 1000000000;
+	unsigned long int sum = (a + b) / 1000000000;
 
 	for (d = 90; d < 98; d++)
 	{
 		printf(", %lu", e + f);
 
-		unsigned long y = e;
+		unsigned long int y = e;
 
 		y = f;
 		f = (y + f + sum) % 100000000;
