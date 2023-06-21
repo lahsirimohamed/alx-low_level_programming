@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+int _abs(int n);
 int print_sign(int n);
 int _isalpha(int c);
 void _putchar(char c);
