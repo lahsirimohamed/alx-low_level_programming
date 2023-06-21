@@ -14,7 +14,7 @@ int main(void)
 	{
 		printf("%lu", b);
 
-		if (d != 97)  
+		if (d != 97)
 			printf(", ");
 
 		c = a + b;
