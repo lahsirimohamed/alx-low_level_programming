@@ -10,7 +10,7 @@ int main(void)
 {
 	unsigned long int a = 1, b = 1, c, d;
 
-	for (d = 0; d < 98; d++)
+	for (d = 0; d < 90; d++)
 	{
 		printf("%lu", b);
 
@@ -22,6 +22,20 @@ int main(void)
 		b = c;
 	}
 
+	unsigned long e = a % 1000000000;
+	unsigned long f = b % 1000000000;
+	unsigned long sum = (a + b) / 1000000000;
+
+	for (d = 90; d < 98; d++)
+	{
+		printf(", %lu", e + f);
+
+		unsigned long y = e;
+
+		y = f;
+		f = (y + f + sum) % 100000000;
+		carry = (y + f + sum) / 1000000000;
+	}
 	printf("\n");
 	return (0);
 }
