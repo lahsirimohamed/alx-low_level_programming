@@ -21,11 +21,11 @@ int main(void)
 		}
 		i += 2;
 	}
-	if (a > 2 && a > b)
+	if (a > 2)
 	{
-			b = a;
+		b = a;
 	}
-	printf("the largest prime factor of the number 612852475143 is :%ld\n", b);
+	printf("%ld\n", b);
 	return (0);
 }
 
