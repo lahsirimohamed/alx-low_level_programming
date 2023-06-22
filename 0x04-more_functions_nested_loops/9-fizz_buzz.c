@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int i;
+	int i, a, b;
 
 	for (i = 1; i <= 100; i++)
 	{
@@ -40,7 +40,10 @@ int main(void)
 		}
 		if ((i % 3 != 0) && (i % 5 != 0))
 		{
-			_putchar(i + '0');
+			a = i % 10;
+			b = (i - a) / 10;
+			_putchar(b + '0');
+			_putchar(a + '0');
 		}
 		if (i != 100)
 			_putchar(' ');
