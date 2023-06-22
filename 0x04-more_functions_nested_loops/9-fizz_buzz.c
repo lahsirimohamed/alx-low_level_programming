@@ -15,38 +15,38 @@ int main(void)
 	{
 		if (i % 3 == 0 && i % 5 != 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
+			putchar('F');
+			putchar('i');
+			putchar('z');
+			putchar('z');
 		}
 		if (i % 3 != 0 && i % 5 == 0)
 		{
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
+			putchar('B');
+			putchar('u');
+			putchar('z');
+			putchar('z');
 		}
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
+			putchar('F');
+			putchar('i');
+			putchar('z');
+			putchar('z');
+			putchar('B');
+			putchar('u');
+			putchar('z');
+			putchar('z');
 		}
 		if ((i % 3 != 0) && (i % 5 != 0))
 		{
 			a = i % 10;
 			b = (i - a) / 10;
-			_putchar(b + '0');
-			_putchar(a + '0');
+			putchar(b + '0');
+			putchar(a + '0');
 		}
 		if (i != 100)
-			_putchar(' ');
+			putchar(' ');
 	}
 	return (0);
 }
