@@ -19,7 +19,6 @@ int main(void)
 			_putchar('i');
 			_putchar('z');
 			_putchar('z');
-			_putchar(' ');
 		}
 		if (!(i % 3 == 0) && (i % 5 == 0))
 		{
@@ -27,7 +26,6 @@ int main(void)
 			_putchar('u');
 			_putchar('z');
 			_putchar('z');
-			_putchar(' ');
 		}
 		if ((i % 3 == 0) && (i % 5 == 0))
 		{
@@ -39,13 +37,13 @@ int main(void)
 			_putchar('u');
 			_putchar('z');
 			_putchar('z');
-			_putchar(' ');
 		}
 		if ((i % 3 != 0) && (i % 5 != 0))
 		{
 			_putchar(i + '0');
-			_putchar(' ');
 		}
+		if (i != 100)
+			_putchar(' ');
 	}
 	return (0);
 }
