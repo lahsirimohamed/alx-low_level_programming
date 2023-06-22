@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	int i = 3;
+	long int i = 3;
 	long int a = 612852475143;
-	int b;
+	long int b;
 
 	while (i * i <= a)
 	{
@@ -25,7 +25,7 @@ int main(void)
 	{
 			b = a;
 	}
-	printf("the largest prime factor of the number 612852475143 is :%d\n", b);
+	printf("the largest prime factor of the number 612852475143 is :%ld\n", b);
 	return (0);
 }
 
