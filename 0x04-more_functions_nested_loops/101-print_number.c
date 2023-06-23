@@ -27,8 +27,8 @@ void print_number(int n)
 	}
 	if (n < 0)
 	{
-		_putchar('-');
 		n = -n;
+		_putchar('-');
 	}
 	for (i = count; i > 0; i--)
 	{
