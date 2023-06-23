@@ -37,8 +37,8 @@ void print_number(int n)
 	{
 		for (i = count; i > 0; i--)
 		{
-			c = n * 10 / b;
-			n = n - c * b / 10;
+			c = n / (b / 10);
+			n = n - (c * b) / 10;
 			b = b / 10;
 			_putchar(c + '0');
 		}
