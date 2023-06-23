@@ -16,7 +16,10 @@ void print_number(int n)
 	int c;
 
 	if (n == 0)
+	{
 		count = 1;
+		_putchar('0');
+	}
 	if (a < 0)
 		a = -a;
 	while (a != 0)
@@ -30,11 +33,14 @@ void print_number(int n)
 		n = -n;
 		_putchar('-');
 	}
-	for (i = count; i > 0; i--)
+	if (n != 0)
 	{
-		c = n * 10 / b;
-		n = n - c * b / 10;
-		b = b / 10;
-		_putchar(c + '0');
+		for (i = count; i > 0; i--)
+		{
+			c = n * 10 / b;
+			n = n - c * b / 10;
+			b = b / 10;
+			_putchar(c + '0');
+		}
 	}
 }
