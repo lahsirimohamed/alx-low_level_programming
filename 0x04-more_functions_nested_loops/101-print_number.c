@@ -12,6 +12,8 @@ void print_number(int n)
 	int count = 0;
 	int a = n;
 	int i;
+	int b = 1;
+	int c = 0;
 
 	if (n == 0)
 		count = 1;
@@ -21,12 +23,15 @@ void print_number(int n)
 	{
 		a = a / 10;
 		count++;
+		b = b * 10;
 	}
 	if (n < 0)
 		_putchar('-');
 	for (i = count; i > 0; i--)
 	{
-		a = n / (10 ** i);
-		_putchar(a + '0');
+		c = n * 10 / b
+		n = n - c * b / 10;
+		b = b / 10
+		_putchar(c + '0');
 	}
 }
