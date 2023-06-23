@@ -26,7 +26,7 @@ void print_number(int n)
 		_putchar('-');
 	for (i = count; i > 0; i--)
 	{
-		a = n / (i * 10);
+		a = n / (10 ** i);
 		_putchar(a + '0');
 	}
 }
