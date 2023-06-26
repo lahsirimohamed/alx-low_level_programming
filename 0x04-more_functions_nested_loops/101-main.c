@@ -11,9 +11,9 @@ int main(void)
     _putchar('\n');
     print_number(402);
     _putchar('\n');
-    print_number(77);
+    print_number(INT_MAX);
     _putchar('\n');
-    print_number(0);
+    print_number(INT_MIN);
     _putchar('\n');
     print_number(1234599);
     _putchar('\n');
