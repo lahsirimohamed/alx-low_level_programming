@@ -11,6 +11,7 @@
 char *_strcpy(char *dest, char *src)
 {
 	int a = 0;
+	int *t = dest;
 
 	while (a == 0)
 	{
@@ -20,6 +21,6 @@ char *_strcpy(char *dest, char *src)
 		if (*src == '\0')
 		       a++;
 	}
-	return (*dest);
+	return (t);
 }
 
