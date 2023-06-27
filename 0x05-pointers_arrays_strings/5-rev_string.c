@@ -17,10 +17,10 @@ void rev_string(char *s)
 	while (*e != '\0')
 	{
 		len++;
-		end++;
+		e++;
 	}
 
-	end--;
+	e--;
 
 	while (f < e)
 	{
