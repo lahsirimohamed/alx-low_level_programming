@@ -9,12 +9,12 @@
 
 int _atoi(char *s)
 {
+	int signe = 1;
+	int num = 0;
+	int beg = 0;
+
 	while (*s != '\0')
 	{
-		int signe = 1;
-		int num = 0;
-		int beg = 0;
-		
 		if (*s >= '0' && *s <= '9')
 		{
 			if (beg == 0)
