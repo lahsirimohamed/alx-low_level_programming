@@ -3,7 +3,7 @@
 
 /**
  * reverse_array-everses the content of an array of integers.
- * @a: input 
+ * @a:input
  * @n: number of elements in the array
  * Return: (void) no return value
  */
