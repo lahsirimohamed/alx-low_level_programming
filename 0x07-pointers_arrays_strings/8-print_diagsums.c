@@ -19,8 +19,5 @@ void print_diagsums(int *a, int size)
 		n += a[i * size + i];
 		m += a[i * size + (size - i - 1)];
 	}
-	_putchar(n + '0');
-	_putchar(',');
-	_putchar(' ');
-	_putchar(m + '0');
+	printf("%d, %d\n", n, m);
 }
