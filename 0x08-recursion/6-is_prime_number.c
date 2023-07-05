@@ -9,7 +9,7 @@
 
 int is_prime_number(int n)
 {
-	return (prime_iteration(n, 2));
+	return (prime_iteration(n, n - 1));
 }
 
 /**
@@ -27,12 +27,12 @@ int prime_iteration(int n, int i)
 	}
 	else
 	{
-		if (i < n)
+		if (i > 1)
 		{
 			if (n % i == 0)
 				return (0);
 			else
-				return (prime_iteration(n, i + 1));
+				return (prime_iteration(n, i - 1));
 		}
 		else
 			return (1);
