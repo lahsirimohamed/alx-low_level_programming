@@ -9,19 +9,19 @@
 
 int is_palindrome(char *s)
 {
-	return (palind(*s, 0));
+	return (palind(s, 0));
 }
 
 int palind(char *s, int i)
 {
 	if (*s)
 	{
-		int n = _strlen_recursion(*s);
+		int n = _strlen_recursion(s);
 
 		if (i < n / 2)
 		{
 			if (s[i] == s[n - i - 1])
-				return (palind(*s, i + 1));
+				return (palind(s, i + 1));
 			else
 				return (0);
 		}
