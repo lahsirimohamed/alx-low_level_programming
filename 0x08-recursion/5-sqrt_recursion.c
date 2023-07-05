@@ -32,4 +32,5 @@ int sqrt_rec(int n, int i)
 		else if (i * i > n)
 			return (-1);
 	}
+	return (-1);
 }
