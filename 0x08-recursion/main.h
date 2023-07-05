@@ -10,7 +10,7 @@ void _print_rev_recursion(char *s);
 int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int sqrt_rec(int n, int i);
-int prime_iteration(n, 1);
+int prime_iteration(n, i);
 
 
 
