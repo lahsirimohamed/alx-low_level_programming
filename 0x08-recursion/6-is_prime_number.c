@@ -9,7 +9,7 @@
 
 int is_prime_number(int n)
 {
-	return (prime_iteration(n, 1));
+	return (prime_iteration(n, 2));
 }
 
 /**
@@ -21,17 +21,21 @@ int is_prime_number(int n)
 
 int prime_iteration(int n, int i)
 {
-	if (n <= 0)
+	if (n <= 1)
 	{
 		return (0);
 	}
 	else
 	{
-		if (n % i == 0)
-			return (i);
+		if (i < n)
+		{
+			if (n % i == 0)
+				return (0);
+			else
+				return (prime_iteration(n, i + 1));
+		}
 		else
-			return (prime_iteration(n, i + 1));
+			return (1);
 	}
-	return (0);
+	return (1);
 }
-
