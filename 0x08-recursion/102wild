@@ -27,13 +27,16 @@ int wildcmp(char *s1, char *s2)
 
 int cmp_rec(char *s1, char *s2, int i, int j)
 {
-	if (*s2 && *s1)
+	if (s2[j] == '*')
 	{
-		if (s2[j] == '*')
+		if (s2[j + 1] == '\0')
+			return (1);
+		else
 		{
 			return (cmp_rec(char *s1, char *s2, int i, int j + 1));
 		}
-		else
+	}
+	else
 		{
 			if (exstr(s1, s2[j], i) == -1)
 				return (0);
@@ -43,11 +46,8 @@ int cmp_rec(char *s1, char *s2, int i, int j)
 				return (cmp_rec(char *s1, char *s2, int i, int j + 1));
 			}
 		}
-
-	}
-	else
-		return (1);
 }
+
 
 /**
  * exstr: check if char exist in string and return vaalue
