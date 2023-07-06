@@ -13,7 +13,9 @@ int sqrt_rec(int n, int i);
 int prime_iteration(int n, int i);
 int palind(char *s, int i);
 int is_palindrome(char *s);
-
+int wildcmp(char *s1, char *s2);
+nt cmp_rec(char *s1, char *s2, int i, int j);
+int exstr(char *s1, char *s2j, int index);
 
 
 
