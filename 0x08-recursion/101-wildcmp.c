@@ -27,7 +27,7 @@ int wildcmp(char *s1, char *s2)
 
 int cmp_rec(char *s1, char *s2, int i, int j)
 {
-	if (*s2)
+	if (*s2 && *s1)
 	{
 		if (s2[j] == '*')
 		{
@@ -57,7 +57,7 @@ int cmp_rec(char *s1, char *s2, int i, int j)
  * Return: index of char, -1 if it doesn't exist
  */
 
-int exstr(char *s1, char *s2j, int index)
+int exstr(char *s1, char s2j, int index)
 {
 	if (*s1)
 	{
