@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 
+int cmp_rec(char *s1, char *s2, int i, int j);
+int exstr(char *s1, char s2j, int index);
+
 /**
  * wildcmp-compare two strings
  * @s1:string to compare
