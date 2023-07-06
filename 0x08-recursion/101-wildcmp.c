@@ -31,15 +31,16 @@ int cmp_rec(char *s1, char *s2, int i, int j)
 	{
 		if (s2[j + 1] == '\0')
 			return (1);
-		return (cmp_rec(char *s1, char *s2, int i, int j + 1));
+		return (cmp_rec(s1, s2, i, j + 1));
 	}
 	else
-		{
-			if (exstr(s1, s2[j], i) == -1)
-				return (0);
-			i = exstr(s1, s2[j], i);
-			return (cmp_rec(char *s1, char *s2, int i, int j + 1));
-		}
+	{
+		if (exstr(s1, s2[j], i) == -1)
+			return (0);
+		i = exstr(s1, s2[j], i);
+		return (cmp_rec(s1, s2, i, j + 1));
+	}
+	return (0);
 }
 
 
