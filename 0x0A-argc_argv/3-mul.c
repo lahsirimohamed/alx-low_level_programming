@@ -10,12 +10,13 @@
 
 int main(int argc; char *argv[])
 {
-	if (argc >= 3)
+	if (argc == 3)
 	{
-		printf("%d\n", convert(argv[1]) * convert(argv[2]));
+		int result = convert(argv[1]) * convert(argv[2]);
+		printf("%d\n", result);
 		return (0);
 	}
-	printf("error\n");
+	printf("Error\n");
 	return (1);
 }
 
