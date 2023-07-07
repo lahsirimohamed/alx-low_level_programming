@@ -3,15 +3,14 @@
 
 /**
  * main-print number àof args
- * @args: number of arg
+ * @argc: number of arg
  * @argv: array of args
  * Return: 0 if succes
  */
 
 int main(int argc, char *argv[])
 {
-	(void) argv;
-
+	(void) argv;/* ignoring argv*/ 
 	printf("%d\n", argc - 1);
 
 	return (0);
