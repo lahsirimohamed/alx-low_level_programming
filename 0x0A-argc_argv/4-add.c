@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * main-adds positive numbers.
+ * @argc: number of args
+ * @argv: array of args
+ * Return: 0 if succes 1 if error
+ */
+
+
 int main(int argc, char *argv)
 {
 	int i;
@@ -47,7 +55,7 @@ int isnum(char *s)
 }
 
 /**
- * convert-convert a string to integer
+ * convert-a string to integer
  * @s: string to convert
  * Return: the integer
  */
