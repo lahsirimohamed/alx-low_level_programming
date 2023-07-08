@@ -31,10 +31,10 @@ int main(int argc, char *argv[])
 		}
 		for (i = 0; i < 5 && cents >= 0; i++)
 		{
-			if (cents >= coint[i])
+			while (cents >= coint[i])
 			{
-				change += cents / coint[i];
-				cents %= coint[i];
+				change++;
+				cents -= coint[i];
 			}
 		}
 
