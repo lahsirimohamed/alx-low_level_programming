@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 			printf("%d\n", 0);
 			return (0);
 		}
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 5 && cents >= 0; i++)
 		{
 			change += cents / coint[i];
 			cents %= coint[i];
