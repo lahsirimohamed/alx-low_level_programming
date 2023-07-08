@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	}
 	if (cents <= 0)
 	{
-		printf("%d\n",0);
+		printf("%d\n", 0);
 		return (0);
 	}
 	for (i = 0; i < 5; i++)
