@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int cents = atoi(argv[1]);
-	int coint[5] = {1, 2, 5, 10, 25};
+	int coint[5] = {25, 10, 5, 2, 1};
 	int change = 0;
 	int i;
 
