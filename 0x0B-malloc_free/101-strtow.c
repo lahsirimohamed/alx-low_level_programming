@@ -18,12 +18,11 @@ char **strtow(char *str)
 	int l = 0;
 	char **array;
 
-	while (*str)
+	for (i = 0; str[i]; i++)
 	{
-		if (*str = " " && *(str + 1) != " ")
+		if (*str[i] == " " && *str[i + 1] != " ")
 		{
 			l++;
-			str++;
 		}
 	}
 
@@ -36,7 +35,7 @@ char **strtow(char *str)
 
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] = " " && str[i + 1] != " ")
+		if (*str[i] = " " && *str[i + 1] != " ")
 		{
 			for (j = i + 1; str[j]; j++)
 			{
