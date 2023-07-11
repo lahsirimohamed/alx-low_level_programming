@@ -75,9 +75,8 @@ int **word(char *str, int c)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
-			c++;
 			k = 0;
-			for (j = 0; j < i; j++)
+			for (j = i - 1; j >= 0; j--)
 			{
 				if (str[j] == ' ')
 				{
