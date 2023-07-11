@@ -6,6 +6,7 @@
  * argstostr-concatenates all the arguments of your program.
  * @ac:size of arg
  * @av:array of arg
+ * Return: apointer to the string
  */
 
 char *argstostr(int ac, char **av)
@@ -20,7 +21,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	conc = malloc(ac * sizeof(char *));
-	if (conc = NULL)
+	if (conc == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
@@ -31,7 +32,7 @@ char *argstostr(int ac, char **av)
 			l++;
 			str++;
 		}
-		conc[i] = malloc ((l + 1) * sizeof(char));
+		conc[i] = malloc((l + 1) * sizeof(char));
 		if (conc[i] == NULL)
 		{
 			for (j = 0; j < i; j++)
