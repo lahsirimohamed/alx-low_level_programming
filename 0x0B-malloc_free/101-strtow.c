@@ -37,15 +37,13 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
-			for (j = i + 1; str[j]; j++)
+			for (j = i ; j >= 0; j--)
 			{
 				if (str[j] == ' ')
-				{
-					k = j;
-					break;
-				}
+				k = j;
+				break;
 			}
-			array[c] = malloc((k - i + 1) * sizeof(char));
+			array[c] = malloc((i - k + 1) * sizeof(char));
 			if (array[c] == NULL)
 			{
 				for (j = 0; j < c; j++)
