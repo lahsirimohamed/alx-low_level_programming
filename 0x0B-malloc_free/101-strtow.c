@@ -19,10 +19,10 @@ char **strtow(char *str)
 		return (NULL);
 
 	split = malloc((c + 1) * sizeof(char *));
-	for (i = 0; i <= c; i++)
+	for (i = 0; i < c; i++)
 	{
 		m = 0;
-		split[i] = malloc((array[i][1] - array[i][0] + 3) * sizeof(char *));
+		split[i] = malloc((array[i][1] - array[i][0] + 3) * sizeof(char));
 		for (j = array[i][0]; j <= array[i][1]; j++)
 		{
 			split[i][m] = str[j];
@@ -64,7 +64,7 @@ int **word(char *str, int c)
 		return (0);
 
 	array = malloc(c * sizeof(int *));
-	for (i = 0; i <= c; i++)
+	for (i = 0; i < c; i++)
 	{
 		array[i] = malloc(2 * sizeof(int));
 	}
