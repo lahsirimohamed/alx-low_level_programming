@@ -42,7 +42,7 @@ char *argstostr(int ac, char **av)
 		}
 		for (j = 0; j < l; j++)
 		{
-			conc[i][j] = av[j];
+			conc[i][j] = av[i][j];
 		}
 		conc[i][l] == '\n';
 	}
