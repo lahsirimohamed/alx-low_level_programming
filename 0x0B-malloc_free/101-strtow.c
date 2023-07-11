@@ -26,7 +26,7 @@ char **strtow(char *str)
 		}
 	}
 
-	if (str == NULL || str == '\0')
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
 	array = malloc ((l + 1) * sizeof(char *));
