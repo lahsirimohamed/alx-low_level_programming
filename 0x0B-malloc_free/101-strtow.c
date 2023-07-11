@@ -18,7 +18,7 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	split = malloc((c + 1) * sizeof(char *));
+	split = malloc((c + 2) * sizeof(char *));
 	for (i = 0; i < c; i++)
 	{
 		m = 0;
@@ -63,8 +63,8 @@ int **word(char *str, int c)
 	if (str == NULL || *str == '\0')
 		return (0);
 
-	array = malloc(c * sizeof(int *));
-	for (i = 0; i < c; i++)
+	array = malloc((c + 1) * sizeof(int *));
+	for (i = 0; i <= c; i++)
 	{
 		array[i] = malloc(2 * sizeof(int));
 	}
