@@ -33,9 +33,9 @@ char *argstostr(int ac, char **av)
 			array[c] = av[i][j];
 			c++;
 		}
-		array[c] = '\0';
-		array[c++] = '\n';
+		array[c] = '\n';
 		c++;
 	}
+	array[c] = '\0';
 	return (array);
 }
