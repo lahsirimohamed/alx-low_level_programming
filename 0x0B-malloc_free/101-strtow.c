@@ -20,32 +20,32 @@ char **strtow(char *str)
 
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] == " " && str[i + 1] != " ")
+		if (str[i] == ' ' && str[i + 1] != ' ')
 		{
 			l++;
 		}
 	}
 
-	if (*str == NULL || *str == "")
+	if (str == NULL || str == "")
 		return (NULL);
 
-	array = malloc (l * sizeof(char *));
+	array = malloc ((l + 1) * sizeof(char *));
 	if (array == NULL)
 		return (NULL);
 
 	for (i = 0; str[i]; i++)
 	{
-		if (*str[i] = " " && *str[i + 1] != " ")
+		if (str[i] == ' ' && str[i + 1] != ' ')
 		{
 			for (j = i + 1; str[j]; j++)
 			{
-				if (str[j] = " ")
+				if (str[j] = ' ')
 				{
 					k = j;
 					break;
 				}
 			}
-			array[c] = malloc((k - i) * sizeof(char) + 1);
+			array[c] = malloc((k - i + 1) * sizeof(char));
 			if (array[c] == NULL)
 			{
 				for (j = 0; j < c; j++)
@@ -64,6 +64,6 @@ char **strtow(char *str)
 			c++;
 		}
 	}
-	array[c] = '\n';
+	array[c][l] = '\n';
 	return (array);
 }
