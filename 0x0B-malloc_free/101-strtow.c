@@ -62,7 +62,7 @@ int **word(char *str, int c)
 	if (str == NULL || *str == '\0')
 		return (0);
 
-	array = malloc((c + 1) * sizeof(int *));
+	array = malloc(c * sizeof(int *));
 	for (i = 0; i <= c; i++)
 	{
 		array[i] = malloc(2 * sizeof(int));
