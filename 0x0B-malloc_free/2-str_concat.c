@@ -18,6 +18,10 @@ char *str_concat(char *s1, char *s2)
 	char *len1 = s1;
 	char *len2 = s2;
 
+	if (s1 == NULL)
+		str_concat("", s2);
+	if (s2 == NULL)
+		str_concat(s1, "");
 	while (*len1)
 	{
 		n++;
