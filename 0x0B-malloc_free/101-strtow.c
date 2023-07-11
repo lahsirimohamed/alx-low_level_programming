@@ -26,7 +26,7 @@ char **strtow(char *str)
 		}
 	}
 
-	if (str == NULL || str == "")
+	if (str == NULL || str == '')
 		return (NULL);
 
 	array = malloc ((l + 1) * sizeof(char *));
@@ -39,7 +39,7 @@ char **strtow(char *str)
 		{
 			for (j = i + 1; str[j]; j++)
 			{
-				if (str[j] = ' ')
+				if (str[j] == ' ')
 				{
 					k = j;
 					break;
