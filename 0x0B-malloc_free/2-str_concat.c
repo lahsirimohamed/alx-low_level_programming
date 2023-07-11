@@ -19,14 +19,9 @@ char *str_concat(char *s1, char *s2)
 	char *len2 = s2;
 
 	if (s1 == NULL)
-		s1 = "";
+		return (str_concat("", s2));
 	if (s2 == NULL)
-		s2 = "";
-	if (s1 == NULL && s2 == NULL)
-	{
-		conc = '\0';
-		return (conc);
-	}
+		return (str_concat(s1, ""));
 	while (*len1)
 	{
 		n++;
