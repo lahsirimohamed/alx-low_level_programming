@@ -21,6 +21,7 @@ char **strtow(char *str)
 	split = malloc((c + 1) * sizeof(char *));
 	for (i = 0; i <= c; i++)
 	{
+		m = 0;
 		split[i] = malloc((array[i][1] - array[i][0] + 3) * sizeof(char *));
 		for (j = array[i][0]; j <= array[i][1]; j++)
 		{
