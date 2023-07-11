@@ -15,9 +15,10 @@ char *argstostr(int ac, char **av)
 	int i;
 	int j;
 	int c = 0;
-
-	if (width <= 0 || height <= 0)
+	
+	if (ac == 0 || av == NULL)
 		return (NULL);
+
 	for (i = 0; i < ac; i++)
 		for (j = 0; a[i][j]; j++)
 			l++;
