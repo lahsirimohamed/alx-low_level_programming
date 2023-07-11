@@ -15,6 +15,9 @@ char **strtow(char *str)
 	int **array;
 	array = word(str, c);
 
+	if (str == NULL || *str == '\0')
+		return (NULL);
+
 	split = malloc((c + 1) * sizeof(char *));
 	for (i = 0; i <= c; i++)
 	{
@@ -27,11 +30,14 @@ char **strtow(char *str)
 		split[i][array[i][1] + 1] = '\0';
 		split[i][array[i][1] + 2] = '\n';
 	}
+	return (split);
+
 }
 
 int numberwords(char *str)
 {
 	int c = 0;
+	int i;
 
 	if (str == NULL || *str == '\0')
 		return (0);
@@ -50,6 +56,8 @@ int **word(char *str, int c)
 	int **array;
 	int t = 0;
 	int i, j;
+	int k;
+	int l;
 
 	if (str == NULL || *str == '\0')
 		return (0);
@@ -57,7 +65,7 @@ int **word(char *str, int c)
 	array = malloc((c + 1) * sizeof(int *));
 	for (i = 0; i <= c; i++)
 	{
-		array[i] = malloc(2 * sizeoff(int));
+		array[i] = malloc(2 * sizeof(int));
 	}
 	if (array == NULL)
 		return (NULL);
