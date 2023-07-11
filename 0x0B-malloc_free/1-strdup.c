@@ -9,10 +9,10 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	nstr = malloc(sizeof(str) * sizeof(char) + 1);
-	for (i = 0; i < sizeof(str); i++)
-		nstr[i] = str[i];
+	nstr = malloc(sizeof(str) * sizeof(char));
 	if (nstr == NULL)
 		return (NULL);
+	for (i = 0; i < sizeof(str); i++)
+		nstr[i] = str[i];
 	return (nstr);
 }
