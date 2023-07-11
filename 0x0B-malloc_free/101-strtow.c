@@ -12,10 +12,10 @@ char **strtow(char *str)
 	int m = 0;
 	int i, j;
 	char **split;
-	char **array;
+	int **array;
 	array = word(str, c);
 
-	split = malloc((c + 1) * sizeof(char *))
+	split = malloc((c + 1) * sizeof(char *));
 	for (i = 0; i <= c; i++)
 	{
 		split[i] = malloc((array[i][1] - array[i][0] + 3) * sizeof(char *));
