@@ -1,35 +1,64 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
 /**
  * strtow- that splits a string into words.
  * @str: string to split
  * Return: pointer to the string
  */
-
-
 char **strtow(char *str)
 {
-	int i;
-	int j;
-	int k = 0;
-	int c = 0;
-	int l = 0;
+	int c = numberwords(str);
+	int m = 0;
+	int i, j;
+	char **split;
 	char **array;
+	array = word(str, c);
+
+	split = malloc((c + 1) * sizeof(char *))
+	for (i = 0; i <= c; i++)
+	{
+		split[i] = malloc((array[i][1] - array[i][0] + 3) * sizeof(char *));
+		for (j = array[i][0]; j <= array[i][1]; j++)
+		{
+			split[i][m] = str[j];
+			m++;
+		}
+		split[i][array[i][1] + 1] = '\0';
+		split[i][array[i][1] + 2] = '\n';
+	}
+}
+
+int numberwords(char *str)
+{
+	int c = 0;
 
 	if (str == NULL || *str == '\0')
-		return (NULL);
-
+		return (0);
 	for (i = 0; str[i]; i++)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
-			l++;
+			c++;
 		}
 	}
+	return (c);
+}
 
-	array = malloc ((l + 1) * sizeof(char *));
+int **word(char *str, int c)
+{
+	int **array;
+	int t = 0;
+	int i, j;
+
+	if (str == NULL || *str == '\0')
+		return (0);
+
+	array = malloc((c + 1) * sizeof(int *));
+	for (i = 0; i <= c; i++)
+	{
+		array[i] = malloc(2 * sizeoff(int));
+	}
 	if (array == NULL)
 		return (NULL);
 
@@ -37,31 +66,21 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
-			for (j = i ; j >= 0; j--)
+			c++;
+			k = 0;
+			for (j = 0; j < i; j++)
 			{
 				if (str[j] == ' ')
-				k = j;
-				break;
-			}
-			array[c] = malloc((i - k + 1) * sizeof(char));
-			if (array[c] == NULL)
-			{
-				for (j = 0; j < c; j++)
 				{
-					free(array[j]);
+					k = j + 1;
+					break;
 				}
-				free(array);
-				return (NULL);
 			}
-
-			for (j = 0; j < k - i; j++)
-			{
-				array[c][j] = str[j + i];
-			}
-			array[c][k - i] = '\n';
-			c++;
+			l = i;
+			array[t][0] = k;
+			array[t][1] = l;
+			t++;
 		}
 	}
-	array[c][l] = '\n';
 	return (array);
 }
