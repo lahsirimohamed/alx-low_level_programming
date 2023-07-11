@@ -44,7 +44,7 @@ char *argstostr(int ac, char **av)
 		{
 			conc[i][j] = av[i][j];
 		}
-		conc[i][l] == '\n';
+		conc[i][l] = '\n';
 	}
 	return (conc);
 }
