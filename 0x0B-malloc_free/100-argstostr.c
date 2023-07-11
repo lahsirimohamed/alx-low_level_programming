@@ -28,19 +28,17 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		if (av[i][j] == '\0')
+		for (j = 0; av[i][j]; j++)
 		{
-			array[c] = '\n';
+			array[c] = av[i][j];
 			c++;
 		}
-		else
+		if (array[c] == '\0')
 		{
-			for (j = 0; av[i][j]; j++)
-			{
-				array[c] = av[i][j];
-				c++;
-			}
+			c++;
+			array[c] = '\n';
 		}
+	}
 	}
 	return (array);
 }
