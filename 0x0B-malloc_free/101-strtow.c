@@ -18,16 +18,16 @@ char **strtow(char *str)
 	int l = 0;
 	char **array;
 
+	if (str == NULL || *str == '\0')
+		return (NULL);
+
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] == ' ' && str[i + 1] != ' ')
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
 			l++;
 		}
 	}
-
-	if (str == NULL || str[0] == '\0')
-		return (NULL);
 
 	array = malloc ((l + 1) * sizeof(char *));
 	if (array == NULL)
@@ -35,7 +35,7 @@ char **strtow(char *str)
 
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] == ' ' && str[i + 1] != ' ')
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
 			for (j = i + 1; str[j]; j++)
 			{
