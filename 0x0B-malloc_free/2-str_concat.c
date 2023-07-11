@@ -19,9 +19,9 @@ char *str_concat(char *s1, char *s2)
 	char *len2 = s2;
 
 	if (s1 == NULL)
-		str_concat("", s2);
+		s1 = "";
 	if (s2 == NULL)
-		str_concat(s1, "");
+		s2 = "";
 	while (*len1)
 	{
 		n++;
