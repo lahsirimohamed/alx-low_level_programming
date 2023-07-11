@@ -15,9 +15,19 @@ char **strtow(char *str)
 	int j;
 	int k = 0;
 	int c = 0;
+	int l = 0;
 	char **array;
 
-	if (str == NULL || str == "")
+	while (*str)
+	{
+		if (*str = " " && *(str + 1) != " ")
+		{
+			l++;
+			str++;
+		}
+	}
+
+	if (*str == NULL || *str == "")
 		return (NULL);
 
 	array = malloc (l * sizeof(char *));
