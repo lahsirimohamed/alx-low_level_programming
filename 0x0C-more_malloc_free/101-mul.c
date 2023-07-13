@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b;
+	long int a, b;
 
 	if (argc != 3)
 	{
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	}
 	a = charint(argv[1]);
 	b = charint(argv[2]);
-	printf("%d\n", a * b);
+	printf("%ld\n", a * b);
 	return(0);
 }
 
@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
  * Return: integer number
  */
 
-int charint(char *num)
+long int charint(char *num)
 {
-	int i, a = 0;
+	long int i, a = 0;
 
 	if (num == NULL)
 	{
