@@ -15,14 +15,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int k = 0, l = 0, i, j;
 
 	if (s1 == NULL)
-		return (string_nconcat(NULL, s2, n));
+		return (string_nconcat('', s2, n));
 	if (s2 == NULL)
-		return (string_nconcat(s1, NULL, n));
+		return (string_nconcat(s1, '', n));
 	while (*s1)
+	{
 		k++;
+		s1++;
+	}
 	k++;
 	while (*s2)
+	{
 		l++;
+		s2++;
+	}
 	l++;
 	if (n >= l)
 		n = l;
