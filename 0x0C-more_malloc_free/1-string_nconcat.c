@@ -11,19 +11,17 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str, *tst1, *tst2;
+	char *str;
 	unsigned int k = 0, l = 0, i, j;
 
 	if (s1 == NULL)
 		return (string_nconcat(NULL, s2, n));
 	if (s2 == NULL)
 		return (string_nconcat(s1, NULL, n));
-	*tst1 = *s1;
-	while (*tst1)
+	while (*s1)
 		k++;
 	k++;
-	*tst2 = *s2;
-	while (*tst2)
+	while (*s2)
 		l++;
 	l++;
 	if (n >= l)
