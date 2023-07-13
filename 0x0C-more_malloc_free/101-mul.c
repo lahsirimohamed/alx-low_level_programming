@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -9,7 +10,7 @@
  */
 
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int a, b;
 
@@ -21,6 +22,7 @@ void main(int argc, char *argv[])
 	a = charint(argv[1]);
 	b = charint(argv[2]);
 	printf("%d\n", a * b);
+	return(0);
 }
 
 /**
