@@ -2,13 +2,23 @@
 #include <stdlib.h>
 #include "dog.h"
 
+/**
+ * new_dog-creates a new dog.
+ * @name:dog name
+ * @age:dog's age
+ * @owner:dog's owner
+ * Return:pointer to the new dog
+ */
+
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ndog;
 	char *name1;
 	char *owner1;
 	int l1 = sizelen(name);
-	int l2 =sizelzn(owner);
+	int l2 =sizelen(owner);
+	int i;
 
 	ndog = malloc(sizeof(dog_t));
 	if (ndog == NULL)
@@ -40,7 +50,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ndog->name = name1;
 	ndog->owner = owner1;
 	ndog->age = age;
+	return (ndog);
 }
+
+/**
+ * sizelen-calculate size of string
+ * @c:string
+ * Return:the size
+ */
 
 int sizelen(char *c)
 {
