@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
+#include "function_pointers.h"
 
 /**
  * array_iterator-functin as a parameter on each element of an array.
