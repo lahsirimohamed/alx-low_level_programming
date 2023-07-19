@@ -3,7 +3,22 @@
 #include "main.h"
 
 /**
- * array_iterator-
+ * array_iterator-functin as a parameter on each element of an array.
+ * @array:array where the fun will be executed
+ * @size:of the array
+ * @action:pointer to the function you need to use
+ * Return: no return value
+ */
+
+
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
+	if (array == NULL || size == 0)
+		return;
+	int i;
 
+	for (i = 0; i < size; i++)
+	{
+		action(array[i]);
+	}
+}
