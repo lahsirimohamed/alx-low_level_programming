@@ -14,11 +14,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list str;
 
 	unsigned int i;
-	const char *tmpstr;
+	char *tmpstr;
 
 	va_start(str, n);
 
-	tmpstr = va_arg(str, char);
+	tmpstr = va_arg(str, char *);
 	for (i = 0; i < n; i++)
 	{
 		if (tmpstr == NULL)
