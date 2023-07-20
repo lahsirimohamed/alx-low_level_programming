@@ -10,10 +10,10 @@
 
 void print_all(const char * const format, ...)
 {
-	char *array, *sep = "";
-	int i = 0;
-
 	va_list arr;
+
+	char *array, *sep = " ";
+	int i = 0;
 
 	va_start(arr, format);
 
