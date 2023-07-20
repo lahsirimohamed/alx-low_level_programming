@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 {
 	va_list arr;
 
-	char *array, *sep = " ";
+	char *array, *sep = "";
 	int i = 0;
 
 	va_start(arr, format);
@@ -40,9 +40,9 @@ void print_all(const char * const format, ...)
 					break;
 				default:
 					i++;
-	/				continue;
+					continue;
 			}
-			sep = ",";
+			sep = ", ";
 			i++;
 		}
 	}
