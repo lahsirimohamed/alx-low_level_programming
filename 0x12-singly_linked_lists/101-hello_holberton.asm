@@ -6,6 +6,6 @@ extern printf
 main:
 	mov edi, msg_to_print
 	call printf
-	mov eax, 60
-	xor edi, edi
-	syscall
+	xor eax, eax
+	mov eax, 0
+	ret
