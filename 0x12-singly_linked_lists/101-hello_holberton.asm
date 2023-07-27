@@ -6,4 +6,4 @@ main:
 	call printf
 	mov eax, 0
 	ret
-msg_to_print: db "Hello, Holberton", 0
+msg_to_print: db 'Hello, Holberton\n', 0
