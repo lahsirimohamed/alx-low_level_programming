@@ -1,5 +1,5 @@
 section .data
-	msg_to_print db "Hello, Holberton", 0
+	msg_to_print db "Hello, Holberton\n", 0
 section .text
 	global _main
 extern printf
