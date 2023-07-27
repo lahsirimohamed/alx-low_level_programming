@@ -5,10 +5,10 @@
 #include <stddef.h>
 
 /**
- * add_node-adds a new node at the end of a list_t list.
- * @head-pointer to a pointer of a list_t list
+ * add_node_end-adds a new node at the end of a list_t list.
+ * @head:pointer to a pointer of a list_t list
  * @str:string to add
- * Return: adress of new element
+ * Return:adress of new element
  */
 
 
