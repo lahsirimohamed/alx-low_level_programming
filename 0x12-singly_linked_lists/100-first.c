@@ -1,6 +1,11 @@
 #include <stdio.h>
 
-void __attribute__((constructor)) before_main()
+/**
+ * print_before_main-print sentence before execution of main
+ */
+
+void __attribute__((constructor)) print_before_main()
 {
-	printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
