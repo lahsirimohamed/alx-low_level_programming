@@ -1,4 +1,4 @@
-global _main
+global main
 extern printf
 main:
 	mov edi, msg_to_print
