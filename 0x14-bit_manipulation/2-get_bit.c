@@ -10,7 +10,7 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int size = sizeof(sizeof(unsigned long int)) - 1;
+	int size = sizeof(unsigned long int) * 8 - 1;
 	int nshifted;
 
 	if (index > size)
