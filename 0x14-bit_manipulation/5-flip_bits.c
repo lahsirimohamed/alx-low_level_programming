@@ -10,7 +10,7 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int size = sizeof(sizeof(unsigned long int)) - 1;
+	unsigned int size = sizeof(unsigned long int) * 8 - 1;
 	unsigned long int xorop = n ^ m;
 	unsigned long int xorshifted;
 	int i, count = 0;
