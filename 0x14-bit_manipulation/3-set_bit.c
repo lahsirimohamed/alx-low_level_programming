@@ -7,10 +7,9 @@
  * @index: of the bit to change
  * Return:1 if it worked, or -1 if an error occurred
  */
-
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int size = sizeof(sizeof(unsigned long int)) - 1;
+	unsigned int size = sizeof(unsigned long int) * 8 - 1;
 
 	if (index > size)
 		return (-1);
