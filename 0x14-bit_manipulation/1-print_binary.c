@@ -9,7 +9,7 @@
 
 void print_binary(unsigned long int n)
 {
-	int size = sizeof(sizeof(unsigned long int)) - 1;
+	int size = sizeof(unsigned long int) * 8 - 1;
 	int i, flag = 0;
 	unsigned long int nshifted;
 
