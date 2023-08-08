@@ -2,13 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+/**
+ * error_exit-handle error cases
+ * @message:ointer to a constant character string
+ */
 
 void error_exit(const char *message)
 {
 	dprintf(STDERR_FILENO, "Error: %s\n", message);
 	exit(1);
 }
+
+/**
+ * main-reads the content of the source file
+ * @argc:number of arg
+ * @argv:array of arrg
+ * Return: 0 if success
+ */
 
 int main(int argc, char *argv[])
 {
