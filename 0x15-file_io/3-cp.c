@@ -12,15 +12,15 @@ void error_exit(const char *message)
 
 int main(int argc, char *argv[])
 {
+	int fd_from, fd_to;
+	ssize_t bytes_read, bytes_written;
+	char buffer[1024];
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
 		exit(97);
 	}
-	int fd_from, fd_to;
-	ssize_t bytes_read, bytes_written;
-	char buffer[1024];
-
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 		error_exit("Can't read from file");
